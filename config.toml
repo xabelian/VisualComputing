@@ -23,7 +23,6 @@ enableGitInfo = true
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
   BookRepo = 'https://github.com/xabelian/VisualComputing'
-
   # Configure the date format used on the pages
   # - In git information
   # - In blog posts
