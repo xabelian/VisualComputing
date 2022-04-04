@@ -1,4 +1,4 @@
-# La Computación Visual en ayuda de personas con Daltonismo
+# Analisis y Modificacion de imagenes para personas con dificultades en la percepcion de color
 
 ## Introduccion
 
