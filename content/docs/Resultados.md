@@ -1,6 +1,14 @@
-## Resultados
+## 1. Resultados
 
-Para la primera entrega se realizo una modificación de los valores de RGB de los pixeles que cumplan con una cierta condición, La modificación de los valores de RGB permite aumentar el contraste de la imagen y diferencias las colores.
+Para la primera entrega se realizo una modificación de los valores de RGB de los pixeles que cumplan con una cierta condición.
+
+Se uso [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) con la siguiente imagen para simular la vision de un paciente con Deuteranopia (ausencia de la percepción del espectro del color verde). 
+
+![Deuteranopia-Simulacion](/VisualComputing/sketches/deuteranopia-simulation.jpg)
+
+A la izquierda la imagen original, a la derecha la imagen como la veria un paciente con Deuteranopia.
+
+La modificación de los valores de RGB permite aumentar el contraste de la imagen y diferencias las colores.
 
 
 
@@ -33,11 +41,12 @@ Para la primera entrega se realizo una modificación de los valores de RGB de lo
     }
 
 
-
 {{< p5-iframe sketch="/VisualComputing/sketches/imageModification.js" width="747" height="373" >}}
 
+Con este resultado, nuevamente simulamos usando Coblis y se obtiene la siguiente imagen.
+![Daltonismo Acromático](/VisualComputing/sketches/edited-simulated.jpg)
 
-Sin embargo para lograr mejores resultados es pertienente la experimentacion con diferentes valores.
 
+## 2. Trabajo futuro
 
-## Trabajo futuro
+Para lograr mejores resultados es pertienente la experimentacion con diferentes valores y condiciones.
