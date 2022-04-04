@@ -145,7 +145,7 @@ function draw() {
 ```
 {{< /details >}}
 
-{{< p5-global-iframe id="breath" width="625" height="auto" >}}
+{{< p5-global-iframe id="breath" width="625" height="625" >}}
 
 let img;
 
@@ -184,8 +184,6 @@ function draw() {
 
 ### Mejorando la visibilidad por medio de p5
 
-Para la primera entrega se realizo una modificación de los valores de RGB de los pixeles que cumplan con una cierta condición.
-
 Se uso [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) con la siguiente imagen para simular la vision de un paciente con Deuteranopia (ausencia de la percepción del espectro del color verde). 
 
 ![Deuteranopia-Simulacion](/VisualComputing/sketches/deuteranopia-simulation.jpg)
@@ -205,7 +203,7 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
     }
 
     function setup() {
-    createCanvas(747, 373);
+    createCanvas(404, 402);
     image(img, 0, 0, width, height);
     let d = pixelDensity();
     loadPixels();
@@ -230,7 +228,8 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
 {{< /details >}}
     
 
-{{< p5-iframe sketch="/VisualComputing/sketches/imageModification.js" width="747" height="373" >}}
+{{< p5-iframe sketch="/VisualComputing/sketches/imageModification.js" width="429" height="427" >}}
 
 Con este resultado, nuevamente simulamos usando Coblis y se obtiene la siguiente imagen.
+
 ![Daltonismo Acromático](/VisualComputing/sketches/edited-simulated.jpg)
