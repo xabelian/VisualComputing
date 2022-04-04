@@ -145,7 +145,7 @@ function draw() {
 ```
 {{< /details >}}
 
-{{< p5-global-iframe id="breath" width="625" height="625" >}}
+{{< p5-global-iframe id="breath" width="625" height="auto" >}}
 
 let img;
 
