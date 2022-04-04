@@ -4,7 +4,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(747, 373);
+  createCanvas(404, 402);
   image(img, 0, 0, width, height);
   let d = pixelDensity();
   loadPixels();
