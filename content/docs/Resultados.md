@@ -32,10 +32,9 @@ Para la primera entrega se realizo una modificación de los valores de RGB de lo
     updatePixels();
     }
 
+<div id="p5demo"></div>
 
 Sin embargo para lograr mejores resultados es pertienente la experimentacion con diferentes valores.
 
-
-Sin embargo para lograr mejores resultados es pertinente la experimentación con diferentes valores y condiciones.
 
 ## Trabajo futuro
