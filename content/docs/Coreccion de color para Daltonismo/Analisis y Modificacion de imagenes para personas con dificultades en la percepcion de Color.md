@@ -50,7 +50,7 @@ Existen diferentes formas para la detección del Daltonismo.
 
 ## Tests de Ishihara
 
-![Deuteranopia-Simulacion](/VisualComputing/sketches/deuteranopia-simulation.jpg)
+![Test de Ishihara](https://www.colorlitelens.com/images/Ishihara/Ishihara_07.jpg)
 
 
 Este es el tipo más común de prueba de daltonismo. Un oftalmólogo (usualmente) le pedirá que mire una imagen formada por puntos de colores con un número o forma de diferente color en el medio. Si la forma se mezcla con el fondo y no puedes verla, es posible que el paciente tenga un tipo de daltonismo. 
@@ -59,9 +59,13 @@ Diferentes placas de color pueden verificar diferentes tipos de daltonismo.
 
 ## Test con Anomaloscopio
 
+![Test de Anamoloscopio](https://www.researchgate.net/profile/Dimitria-Gatzia/publication/315959577/figure/fig3/AS:494445285961728@1494896350925/An-anomaloscope-is-usually-used-to-test-color-blindness-or-conduct-matching-experiments.png)
+
 Esta prueba verifica si el paciente puede igualar el brillo de dos luces. Se mira a través de un ocular a 2 luces que tienen diferentes niveles de brillo. Se usan perillas para ajustar las luces y se trata de hacer que coincidan. Si no puede igualar el brillo de las 2 luces, es posible que el paciente sufra de daltonismo.
 
 ##  Test de tonos
+
+![Test de Tonos](https://mymodernmet.com/wp/wp-content/uploads/2018/10/color-vision-test-pantone-2.jpg)
 
 En una prueba de tono, Se entregan bloques de diferentes colores. Su oftalmólogo pide al paciente que las coloque en el orden del arcoíris, como de rojo a púrpura. Si tiene problemas para ponerlos en el orden correcto, es posible que tenga un tipo de daltonismo. Los oftalmólogos a menudo usan esta prueba para las personas que necesitan tener una visión del color muy precisa para sus trabajos, como fotógrafos o diseñadores.
 
