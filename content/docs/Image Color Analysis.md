@@ -29,3 +29,19 @@ La mayoría de los casos de daltonismo se deben a un problema genético. Muy poc
     - Tritanomalía la menos frecuente (0.01 en hombres- 0.01 % en mujeres).
 
 ![Daltonismo Acromático](https://www.qvision.es/blogs/ana-tauste/files/2016/04/daltonismo-1024x1006.jpg)
+
+### Entendiendo el problema
+
+Para las personas que no tenemos dificultades para el reconocimiento de colores, entender el daltonismo muchas veces es simplemente creer que se confunde un color por otro y ya, pero esta condición, como pudimos ver anteriormente, tiene distintas variantes y no solo eso, tambien niveles. Una persona con daltonismo tricromático con deutoranopia en grado leve moderado, podria percibir los colores rojos de una forma no tan vívida
+
+![Imagen Referencia Rojos](/VisualComputing/sketches/red_crayons.png)
+
+Si mediante al procesamiento de imagenes queremos simular este tipo de daltonismo, lo primero que debemos recordar es que en una imagen el color de cada pixel esta compuesto por niveles de cada uno de los colores RGB. 
+
+![Imagen Referencia Rojos](/VisualComputing/sketches/paleta.png)
+
+Entonces si dismunuimos el nivel del rojo y aumentamos el nivel del verde podriamos acercarnos a una recreación de este tipo de daltonismo
+
+![Imagen daltonismo tricromático](/VisualComputing/sketches/crayon_ref2.png)
+
+
