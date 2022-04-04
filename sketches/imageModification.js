@@ -1,6 +1,6 @@
 let img;
 function preload() {
-  img = loadImage('https://hips.hearstapps.com/hbu.h-cdn.co/assets/17/04/1600x800/landscape-foliage-color-blindness-1.jpg?resize=980:*');
+  img = loadImage('/VisualComputing/sketches/original.jpg');
 }
 
 function setup() {
