@@ -4,6 +4,9 @@ Existen diferentes formas para la detección del Daltonismo.
 
 ## Tests de Ishihara
 
+![Deuteranopia-Simulacion](/VisualComputing/sketches/deuteranopia-simulation.jpg)
+
+
 Este es el tipo más común de prueba de daltonismo. Un oftalmólogo (usualmente) le pedirá que mire una imagen formada por puntos de colores con un número o forma de diferente color en el medio. Si la forma se mezcla con el fondo y no puedes verla, es posible que el paciente tenga un tipo de daltonismo. 
 
 Diferentes placas de color pueden verificar diferentes tipos de daltonismo.
