@@ -8,7 +8,7 @@ Este es el tipo más común de prueba de daltonismo. Un oftalmólogo (usualmente
 
 Diferentes placas de color pueden verificar diferentes tipos de daltonismo.
 
-## Test con Anomaloscope
+## Test con Anomaloscopio
 
 Esta prueba verifica si el paciente puede igualar el brillo de dos luces. Se mira a través de un ocular a 2 luces que tienen diferentes niveles de brillo. Se usan perillas para ajustar las luces y se trata de hacer que coincidan. Si no puede igualar el brillo de las 2 luces, es posible que el paciente sufra de daltonismo.
 
