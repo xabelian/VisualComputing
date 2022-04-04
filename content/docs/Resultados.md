@@ -34,7 +34,7 @@ Para la primera entrega se realizo una modificación de los valores de RGB de lo
 
 
 
-{{< p5-iframe sketch="/showcase/sketches/imageModification.js" width="747" height="373" >}}
+{{< p5-iframe sketch="/VisualComputing/sketches/imageModification.js" width="747" height="373" >}}
 
 
 Sin embargo para lograr mejores resultados es pertienente la experimentacion con diferentes valores.
