@@ -1,3 +1,3 @@
-# Camilo
-# Sergio
-# Nicolas
+# Camilo Garcia 
+# Sergio Rivera
+# Nicolas Contreras
