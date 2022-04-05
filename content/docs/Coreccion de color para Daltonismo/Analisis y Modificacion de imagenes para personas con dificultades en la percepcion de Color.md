@@ -80,7 +80,7 @@ En una prueba de tono, Se entregan bloques de diferentes colores. Su oftalmólog
 let img;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 505);
   img = loadImage('/VisualComputing/sketches/red_crayons.png');
 }
 
@@ -92,12 +92,12 @@ function draw() {
 
 
 
-{{< p5-global-iframe id="breath" width="625" height="625" >}}
+{{< p5-global-iframe id="breath" width="620" height="530" >}}
 
 let img;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 505);
   img = loadImage('/VisualComputing/sketches/red_crayons.png');
 }
 
@@ -119,7 +119,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 505);
 
   img.loadPixels();
   // Se recorre cada pixel de la imagen
@@ -149,7 +149,7 @@ function draw() {
 ```
 {{< /details >}}
 
-{{< p5-global-iframe id="breath" width="625" height="625" >}}
+{{< p5-global-iframe id="breath" width="620" height="530" >}}
 
 let img;
 
@@ -158,7 +158,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 505);
 
   img.loadPixels();
   // Se recorre cada pixel de la imagen
