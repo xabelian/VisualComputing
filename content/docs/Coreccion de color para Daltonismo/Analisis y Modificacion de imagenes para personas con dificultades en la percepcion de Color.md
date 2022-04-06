@@ -192,7 +192,7 @@ Se uso [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator
 
 ![Deuteranopia-Simulacion](/VisualComputing/sketches/deuteranopia-simulation.jpg)
 
-A la izquierda la imagen original, a la derecha la imagen como la veria un paciente con Deuteranopia.
+A la izquierda la imagen original, a la derecha la imagen como la veria un paciente con Deuteranopia al ser simulado con Coblis.
 
 La modificación de los valores de RGB permite aumentar el contraste de la imagen y diferencias las colores.
 
@@ -237,3 +237,8 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
 Con este resultado, nuevamente simulamos usando Coblis y se obtiene la siguiente imagen.
 
 ![Daltonismo Acromático](/VisualComputing/sketches/edited-simulated.jpg)
+
+## Referencias
+
+[How to make figures and presentations that are friendly to Colorblind people](https://jfly.uni-koeln.de/color/)
+[https://medium.com/featurepreneur/understanding-the-concept-of-channels-in-an-image-6d59d4dafaa9](Understanding the concept of channels in an image)
