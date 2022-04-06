@@ -1,4 +1,4 @@
-# Modificacion de imagenes para personas con dificultades en la percepcion de color
+# Modificación de imagenes para personas con dificultades en la percepcion de color
 
 ## Introduccion
 
