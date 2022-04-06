@@ -1,4 +1,4 @@
-# Analisis y Modificacion de imagenes para personas con dificultades en la percepcion de color
+# Modificacion de imagenes para personas con dificultades en la percepcion de color
 
 ## Introduccion
 
@@ -201,9 +201,9 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
 
 ```js
 
-    let img;
+   let img;
     function preload() {
-    img = loadImage('/VisualComputing/sketches/original.jpg');
+    img = loadImage('https://xabelian.github.io/VisualComputing/sketches/original.jpg');
     }
 
     function setup() {
@@ -220,7 +220,8 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
                 var a = pixels[index+3];     
                 
                 if (g > 80){
-                    pixels[index+0] = r+70
+                    pixels[index+2] = b+70
+                    //pixels[index+1] = g-40
                 }
 
                 
