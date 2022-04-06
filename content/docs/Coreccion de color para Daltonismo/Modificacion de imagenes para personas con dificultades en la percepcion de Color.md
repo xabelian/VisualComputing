@@ -1,6 +1,6 @@
 # Modificación de imagenes para personas con dificultades en la percepcion de color
 
-## Introduccion
+## Introducción
 
 El daltonismo es la incapacidad para ver algunos colores en la forma normal.
 
