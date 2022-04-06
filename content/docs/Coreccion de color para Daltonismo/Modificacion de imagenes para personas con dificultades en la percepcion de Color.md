@@ -242,4 +242,4 @@ Con este resultado, nuevamente simulamos usando Coblis y se obtiene la siguiente
 ## Referencias
 
 [How to make figures and presentations that are friendly to Colorblind people](https://jfly.uni-koeln.de/color/)
-[https://medium.com/featurepreneur/understanding-the-concept-of-channels-in-an-image-6d59d4dafaa9](Understanding the concept of channels in an image)
+[Understanding the concept of channels in an image](https://medium.com/featurepreneur/understanding-the-concept-of-channels-in-an-image-6d59d4dafaa9)
