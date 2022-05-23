@@ -1,6 +1,16 @@
 ## Scene Trees
 ### 3D Brush
 
+Una de las aplicaciones mas interesantes sobre los entornos de dibujo 3D o 3D Brushes, es acerca de los distintos dispositivos que se pueden utilizar para manipular estos espacios de trabajo. La idea de utilizar dispositivos diferentes es mejorar la experiencia del usuario y permitirle utilizar dispositivos diferentes al teclado y el mosue.
+
+En nuestro caso, estudiamos el uso de controles de consolas en un 3D Brush, puntualmente el control de un PlayStation 4. Se estudio el uso de la libreria GamepadAPI y drivers como DS4Windows
+
+![image](https://user-images.githubusercontent.com/36849580/169844039-63a56ece-47cc-4263-80c0-2a3dceb1050a.png)
+
+Para la creación del 3D Brush, se utilizo como base el espacio dado por el profesor, haciendo uso de las librerias Treegl y Opencam.
+
+
+
 {{< details title="p5 iFrame ShortCode" open=false >}}
 ```js
 < p5-iframe sketch="/sketches/trees/3dbrush.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" lib2="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="625" height="475" >
