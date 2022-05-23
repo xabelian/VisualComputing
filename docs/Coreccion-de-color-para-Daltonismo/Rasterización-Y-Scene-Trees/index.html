@@ -1,0 +1,247 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Rasterización Y Scene Trees #  Rasterizacion #  Scene Trees #  3D Brush #  p5 iFrame ShortCode < p5-iframe sketch=&#34;/sketches/trees/3dbrush.js&#34; lib1=&#34;https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js&#34; lib2=&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34; width=&#34;625&#34; height=&#34;475&#34; >    3d Brush js // Goal in the 3d Brush is double, to implement: // 1. a gesture parser to deal with depth, i.e., // replace the depth slider with something really // meaningful. You may use a 3d sensor hardware // such as: https://en."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Rasterización Y Scene Trees #  Rasterizacion #  Scene Trees #  3D Brush #  p5 iFrame ShortCode < p5-iframe sketch=&#34;/sketches/trees/3dbrush.js&#34; lib1=&#34;https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js&#34; lib2=&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34; width=&#34;625&#34; height=&#34;475&#34; >    3d Brush js // Goal in the 3d Brush is double, to implement: // 1. a gesture parser to deal with depth, i.e., // replace the depth slider with something really // meaningful. You may use a 3d sensor hardware // such as: https://en."><meta property="og:type" content="article"><meta property="og:url" content="https://xabelian.github.io/VisualComputing/docs/Coreccion-de-color-para-Daltonismo/Rasterizaci%C3%B3n-Y-Scene-Trees/"><meta property="article:section" content="docs"><title>Rasterización Y Scene Trees | Showcase Template</title><link rel=manifest href=/VisualComputing/manifest.json><link rel=icon href=/VisualComputing/favicon.png type=image/x-icon><link rel=stylesheet href=/VisualComputing/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/VisualComputing/flexsearch.min.js></script>
+<script defer src=/VisualComputing/en.search.min.936ea3a0cc38a95432f1278f95af2b29bceb9e4d01a98ecb7295d28f9c0c7838.js integrity="sha256-k26joMw4qVQy8SePla8rKbzrnk0BqY7LcpXSj5wMeDg=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/VisualComputing/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/VisualComputing/docs/Coreccion-de-color-para-Daltonismo/Modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-Color/>Modificacion De Imagenes Para Personas Con Dificultades en La Percepcion De Color</a></li><li><a href=/VisualComputing/docs/Coreccion-de-color-para-Daltonismo/Rasterizaci%C3%B3n-Y-Scene-Trees/ class=active>Rasterización Y Scene Trees</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/VisualComputing/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Rasterización Y Scene Trees</strong>
+<label for=toc-control><img src=/VisualComputing/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#rasterización-y-scene-trees>Rasterización Y Scene Trees</a><ul><li><a href=#rasterizacion>Rasterizacion</a></li><li><a href=#scene-trees>Scene Trees</a><ul><li><a href=#3d-brush>3D Brush</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=rasterización-y-scene-trees>Rasterización Y Scene Trees
+<a class=anchor href=#rasterizaci%c3%b3n-y-scene-trees>#</a></h1><h2 id=rasterizacion>Rasterizacion
+<a class=anchor href=#rasterizacion>#</a></h2><h2 id=scene-trees>Scene Trees
+<a class=anchor href=#scene-trees>#</a></h2><h3 id=3d-brush>3D Brush
+<a class=anchor href=#3d-brush>#</a></h3><details><summary>p5 iFrame ShortCode</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p5</span><span style=color:#f92672>-</span><span style=color:#a6e22e>iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/sketches/trees/3dbrush.js&#34;</span> <span style=color:#a6e22e>lib1</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js&#34;</span> <span style=color:#a6e22e>lib2</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;475&#34;</span> <span style=color:#f92672>&gt;</span>
+</span></span></code></pre></div></div></details><details><summary>3d Brush js</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#75715e>// Goal in the 3d Brush is double, to implement:
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// 1. a gesture parser to deal with depth, i.e.,
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// replace the depth slider with something really
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// meaningful. You may use a 3d sensor hardware
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// such as: https://en.wikipedia.org/wiki/Leap_Motion
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// or machine learning software to parse hand (or
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// body) gestures from a (video) / image, such as:
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// https://ml5js.org/
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// 2. other brushes to stylize the 3d brush, taking
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// into account its shape and alpha channel, gesture
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// speed, etc.
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Brush controls
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>color</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>depth</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>brush</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>easycam</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>state</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>escorzo</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>points</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>record</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>600</span>, <span style=color:#ae81ff>450</span>, <span style=color:#a6e22e>WEBGL</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// easycam stuff
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>distance</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>250</span>,           <span style=color:#75715e>// scalar
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>center</span><span style=color:#f92672>:</span> [<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>],       <span style=color:#75715e>// vector
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>rotation</span><span style=color:#f92672>:</span> [<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>],  <span style=color:#75715e>// quaternion
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  };
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>easycam</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createEasyCam</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>easycam</span>.<span style=color:#a6e22e>state_reset</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>state</span>;   <span style=color:#75715e>// state to use on reset (double-click/tap)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>easycam</span>.<span style=color:#a6e22e>setState</span>(<span style=color:#a6e22e>state</span>, <span style=color:#ae81ff>2000</span>); <span style=color:#75715e>// now animate to that state
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>escorzo</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>perspective</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// brush stuff
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>points</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>depth</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0.05</span>, <span style=color:#ae81ff>0.05</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;580px&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>color</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createColorPicker</span>(<span style=color:#e6db74>&#39;#ed225d&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>color</span>.<span style=color:#a6e22e>position</span>(<span style=color:#a6e22e>width</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>70</span>, <span style=color:#ae81ff>40</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// select initial brush
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>brush</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>sphereBrush</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>update</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>120</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>0.8</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;magenta&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>grid</span>({ <span style=color:#a6e22e>dotted</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>false</span> });
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>axes</span>();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>point</span> <span style=color:#66d9ef>of</span> <span style=color:#a6e22e>points</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>translate</span>(<span style=color:#a6e22e>point</span>.<span style=color:#a6e22e>worldPosition</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>brush</span>(<span style=color:#a6e22e>point</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>update</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>dx</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>abs</span>(<span style=color:#a6e22e>mouseX</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>pmouseX</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>dy</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>abs</span>(<span style=color:#a6e22e>mouseY</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>pmouseY</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>speed</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>constrain</span>((<span style=color:#a6e22e>dx</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>dy</span>) <span style=color:#f92672>/</span> (<span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> (<span style=color:#a6e22e>width</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>height</span>)), <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>record</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>points</span>.<span style=color:#a6e22e>push</span>({
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>worldPosition</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>treeLocation</span>([<span style=color:#a6e22e>mouseX</span>, <span style=color:#a6e22e>mouseY</span>, <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>()], { <span style=color:#a6e22e>from</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;SCREEN&#39;</span>, <span style=color:#a6e22e>to</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;WORLD&#39;</span> }),
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>color</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>color</span>.<span style=color:#a6e22e>color</span>(),
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>speed</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>speed</span>
+</span></span><span style=display:flex><span>    });
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>sphereBrush</span>(<span style=color:#a6e22e>point</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// TODO parameterize sphere radius and / or
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#75715e>// alpha channel according to gesture speed
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>point</span>.<span style=color:#a6e22e>color</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sphere</span>(<span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>keyPressed</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;r&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>record</span> <span style=color:#f92672>=</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>record</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;p&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>escorzo</span> <span style=color:#f92672>=</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>escorzo</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>escorzo</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>perspective</span>() <span style=color:#f92672>:</span> <span style=color:#a6e22e>ortho</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;c&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>points</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseWheel</span>(<span style=color:#a6e22e>event</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//comment to enable page scrolling
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><iframe id=breath style=width:620px;height:530px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js></script>
+            <script src=https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js></script>
+            <script src=https://github.com/freshfork/p5.EasyCam.git></script>
+            <script src=https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js></script>
+            
+            
+            
+            
+            
+            <script>
+              
+
+
+// Goal in the 3d Brush is double, to implement:
+// 1. a gesture parser to deal with depth, i.e.,
+// replace the depth slider with something really
+// meaningful. You may use a 3d sensor hardware
+// such as: https://en.wikipedia.org/wiki/Leap_Motion
+// or machine learning software to parse hand (or
+// body) gestures from a (video) / image, such as:
+// https://ml5js.org/
+// 2. other brushes to stylize the 3d brush, taking
+// into account its shape and alpha channel, gesture
+// speed, etc.
+
+// Brush controls
+let color;
+let depth;
+let brush;
+
+let easycam;
+let state;
+
+let escorzo;
+let points;
+let record;
+
+function setup() {
+  createCanvas(600, 450, WEBGL);
+  // easycam stuff
+  let state = {
+    distance: 250,           // scalar
+    center: [0, 0, 0],       // vector
+    rotation: [0, 0, 0, 1],  // quaternion
+  };
+  easycam = createEasyCam();
+  easycam.state_reset = state;   // state to use on reset (double-click/tap)
+  easycam.setState(state, 2000); // now animate to that state
+  escorzo = true;
+  perspective();
+
+  // brush stuff
+  points = [];
+  depth = createSlider(0, 1, 0.05, 0.05);
+  depth.position(10, 10);
+  depth.style('width', '580px');
+  color = createColorPicker('#ed225d');
+  color.position(width - 70, 40);
+  // select initial brush
+  brush = sphereBrush;
+}
+
+function draw() {
+  update();
+  background(120);
+  push();
+  strokeWeight(0.8);
+  stroke('magenta');
+  grid({ dotted: false });
+  pop();
+  axes();
+  for (const point of points) {
+    push();
+    translate(point.worldPosition);
+    brush(point);
+    pop();
+  }
+}
+
+function update() {
+  let dx = abs(mouseX - pmouseX);
+  let dy = abs(mouseY - pmouseY);
+  speed = constrain((dx + dy) / (2 * (width - height)), 0, 1);
+  if (record) {
+    points.push({
+      worldPosition: treeLocation([mouseX, mouseY, depth.value()], { from: 'SCREEN', to: 'WORLD' }),
+      color: color.color(),
+      speed: speed
+    });
+  }
+}
+
+function sphereBrush(point) {
+  push();
+  noStroke();
+  // TODO parameterize sphere radius and / or
+  // alpha channel according to gesture speed
+  fill(point.color);
+  sphere(1);
+  pop();
+}
+
+function keyPressed() {
+  if (key === 'r') {
+    record = !record;
+  }
+  if (key === 'p') {
+    escorzo = !escorzo;
+    escorzo ? perspective() : ortho();
+  }
+  if (key == 'c') {
+    points = [];
+  }
+}
+
+function mouseWheel(event) {
+  //comment to enable page scrolling
+  return false;
+}
+
+
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#rasterización-y-scene-trees>Rasterización Y Scene Trees</a><ul><li><a href=#rasterizacion>Rasterizacion</a></li><li><a href=#scene-trees>Scene Trees</a><ul><li><a href=#3d-brush>3D Brush</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
