@@ -104,3 +104,10 @@ Mesa cuenta con varios renderizadores por software entre los que el más popular
 
 Mesa tambien puede ser usado junto al rasterizador OpenSWR, que provee un rasterizador compatible con OpenGL para alto rendimiento y escalabilidad. OpenSWR está completamente basado en la CPU, corre en cualquier plataforma desde laptops hasta ambientes de alto rendimiento. OpenSWR se construye sobre LLVM y utiliza modernos sets de instrucciones como el Intel Advanced Vector Extensions para alcanzar los altos niveles de rendimiento que promete.
 
+## Bibliografía 
+
+[1] "Hardware vs. Software Rendering", Autodesk, 2022. Recuperado de: https://download.autodesk.com/us/maya/2008help/refguide/node57.html.
+
+[2] "Software Rendering from Scratch", Medium, 2022.  Recuperado de: https://medium.com/@aminere/software-rendering-from-scratch-f60127a7cd58. 
+
+[3] "Modern software rendering", Production Systems and Information Engineering. 6. 55-66. Mileff, Peter & Dudra, Judit. (2012).
