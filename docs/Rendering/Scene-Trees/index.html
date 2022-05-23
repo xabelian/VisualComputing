@@ -1,8 +1,8 @@
 <!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Scene Trees #  3D Brush #  p5 iFrame ShortCode < p5-iframe sketch=&#34;/sketches/trees/3dbrush.js&#34; lib1=&#34;https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js&#34; lib2=&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34; width=&#34;625&#34; height=&#34;475&#34; >    3d Brush js // Goal in the 3d Brush is double, to implement: // 1. a gesture parser to deal with depth, i.e., // replace the depth slider with something really // meaningful. You may use a 3d sensor hardware // such as: https://en.wikipedia.org/wiki/Leap_Motion // or machine learning software to parse hand (or // body) gestures from a (video) / image, such as: // https://ml5js."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Scene Trees #  3D Brush #  p5 iFrame ShortCode < p5-iframe sketch=&#34;/sketches/trees/3dbrush.js&#34; lib1=&#34;https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js&#34; lib2=&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34; width=&#34;625&#34; height=&#34;475&#34; >    3d Brush js // Goal in the 3d Brush is double, to implement: // 1. a gesture parser to deal with depth, i.e., // replace the depth slider with something really // meaningful. You may use a 3d sensor hardware // such as: https://en.wikipedia.org/wiki/Leap_Motion // or machine learning software to parse hand (or // body) gestures from a (video) / image, such as: // https://ml5js."><meta property="og:type" content="article"><meta property="og:url" content="https://xabelian.github.io/VisualComputing/docs/Rendering/Scene-Trees/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2022-05-23T02:02:56-05:00"><title>Scene Trees | Showcase Template</title><link rel=manifest href=/VisualComputing/manifest.json><link rel=icon href=/VisualComputing/favicon.png type=image/x-icon><link rel=stylesheet href=/VisualComputing/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous><script defer src=/VisualComputing/flexsearch.min.js></script>
-<script defer src=/VisualComputing/en.search.min.0c8714733050df6345bd7c437a8407fbf96e087d899a3cb91870bd1632576d19.js integrity="sha256-DIcUczBQ32NFvXxDeoQH+/luCH2Jmjy5GHC9FjJXbRk=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<script defer src=/VisualComputing/en.search.min.9c09d8c3b0d0e85ff35c2f3d4be2afbe0d6bbdf4b1fb3c051c15faa609a98cc0.js integrity="sha256-nAnYw7DQ6F/zXC89S+Kvvg1rvfSx+zwFHBX6pgmpjMA=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/VisualComputing/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/VisualComputing/docs/Coreccion-de-color-para-Daltonismo/Modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-Color/>Modificacion De Imagenes Para Personas Con Dificultades en La Percepcion De Color</a></li><li><a href=/VisualComputing/docs/Rendering/Scene-Trees/ class=active>Scene Trees</a></li><li><a href=/VisualComputing/docs/Rendering/Software-Rendering/>Software Rendering</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/VisualComputing/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Scene Trees</strong>
-<label for=toc-control><img src=/VisualComputing/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#scene-trees>Scene Trees</a><ul><li><a href=#3d-brush>3D Brush</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h2 id=scene-trees>Scene Trees
+<label for=toc-control><img src=/VisualComputing/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#scene-trees>Scene Trees</a><ul><li><a href=#3d-brush>3D Brush</a></li><li><a href=#3d-gui>3D GUI</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h2 id=scene-trees>Scene Trees
 <a class=anchor href=#scene-trees>#</a></h2><h3 id=3d-brush>3D Brush
 <a class=anchor href=#3d-brush>#</a></h3><details><summary>p5 iFrame ShortCode</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p5</span><span style=color:#f92672>-</span><span style=color:#a6e22e>iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/sketches/trees/3dbrush.js&#34;</span> <span style=color:#a6e22e>lib1</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js&#34;</span> <span style=color:#a6e22e>lib2</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;475&#34;</span> <span style=color:#f92672>&gt;</span>
 </span></span></code></pre></div></div></details><details><summary>3d Brush js</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#75715e>// Goal in the 3d Brush is double, to implement:
@@ -242,5 +242,503 @@ function mouseWheel(event) {
           <body>
           </body>
         </html>
+      "></iframe><h3 id=3d-gui>3D GUI
+<a class=anchor href=#3d-gui>#</a></h3><details><summary>p5 iFrame ShortCode</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p5</span><span style=color:#f92672>-</span><span style=color:#a6e22e>iframe</span> <span style=color:#a6e22e>sketch</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/sketches/trees/3dbrush.js&#34;</span> <span style=color:#a6e22e>lib1</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js&#34;</span> <span style=color:#a6e22e>lib2</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js&#34;</span> <span style=color:#a6e22e>width</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;625&#34;</span> <span style=color:#a6e22e>height</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;475&#34;</span> <span style=color:#f92672>&gt;</span>
+</span></span></code></pre></div></div></details><details><summary>3D GUI js</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Brush controls
+</span></span></span><span style=display:flex><span><span style=color:#75715e>// texture
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>img</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>// check boxes
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>toggle_3d_gui</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>auto_rotate</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>// select
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>mode</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>tipo</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>// select forma
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>forma</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>// 3d gui
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>color1</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>color2</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//Ejes x,y,z
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x_e</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>y_e</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>z_e</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>easycam</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>foreshortening</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// bulls shape
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>circled</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// resume animation
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>frames</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// spaces
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sphere1</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sphere2</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>depth</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>preload</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>img</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>loadImage</span>(<span style=color:#e6db74>&#39;https://upload.wikimedia.org/wikipedia/commons/b/b1/Mapa_mundi_blanco.PNG&#39;</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>600</span>, <span style=color:#ae81ff>480</span>, <span style=color:#a6e22e>WEBGL</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>textureMode</span>(<span style=color:#a6e22e>NORMAL</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>toggle_3d_gui</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createCheckbox</span>(<span style=color:#e6db74>&#39;toggle 3d gui&#39;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>toggle_3d_gui</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;color&#39;</span>, <span style=color:#e6db74>&#39;white&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>toggle_3d_gui</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>30</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>toggle_3d_gui</span>.<span style=color:#a6e22e>changed</span>(() =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>toggle_3d_gui</span>.<span style=color:#a6e22e>checked</span>()) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>color1</span>.<span style=color:#a6e22e>show</span>();
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>color2</span>.<span style=color:#a6e22e>show</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>color1</span>.<span style=color:#a6e22e>hide</span>();
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>color2</span>.<span style=color:#a6e22e>hide</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  });
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// brush stuff
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>depth</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>130</span>, <span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;270px&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// select initial brush
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// brush stuff
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>depth1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>130</span>, <span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>depth1</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>310</span>, <span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>depth1</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;width&#39;</span>, <span style=color:#e6db74>&#39;270px&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// select initial brush
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//eje de rotacion x
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>x_rotate</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createCheckbox</span>(<span style=color:#e6db74>&#39;X&#39;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>x_rotate</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;color&#39;</span>, <span style=color:#e6db74>&#39;white&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>x_rotate</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>90</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//eje de rotacion y
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>y_rotate</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createCheckbox</span>(<span style=color:#e6db74>&#39;Y&#39;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>y_rotate</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;color&#39;</span>, <span style=color:#e6db74>&#39;white&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>y_rotate</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>45</span>, <span style=color:#ae81ff>90</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//eje de rotacion z
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>z_rotate</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createCheckbox</span>(<span style=color:#e6db74>&#39;Z&#39;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>z_rotate</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;color&#39;</span>, <span style=color:#e6db74>&#39;white&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>z_rotate</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>80</span>, <span style=color:#ae81ff>90</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//rotacion
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>auto_rotate</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createCheckbox</span>(<span style=color:#e6db74>&#39;reinicio rotate&#39;</span>, <span style=color:#66d9ef>false</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>auto_rotate</span>.<span style=color:#a6e22e>style</span>(<span style=color:#e6db74>&#39;color&#39;</span>, <span style=color:#e6db74>&#39;orange&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>auto_rotate</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>60</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mode</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSelect</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mode</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>15</span>, <span style=color:#ae81ff>120</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mode</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Fill&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mode</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Wiredframe&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mode</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Texture&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>mode</span>.<span style=color:#a6e22e>value</span>(<span style=color:#e6db74>&#39;Texture&#39;</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createSelect</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>15</span>, <span style=color:#ae81ff>150</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Esfera&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Cilindro&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Cono&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Cubo&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Cuboide&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Piramide&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;Texture&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>value</span>(<span style=color:#e6db74>&#39;Esfera&#39;</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>color1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createColorPicker</span>(<span style=color:#e6db74>&#39;cyan&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>color2</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createColorPicker</span>(<span style=color:#e6db74>&#39;magenta&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>easycam</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>createEasyCam</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>distance</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>300</span>,           <span style=color:#75715e>// scalar
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>center</span><span style=color:#f92672>:</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>],       <span style=color:#75715e>// vector
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>rotation</span><span style=color:#f92672>:</span> [<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>],  <span style=color:#75715e>// quaternion
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  };
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>easycam</span>.<span style=color:#a6e22e>setState</span>(<span style=color:#a6e22e>state</span>, <span style=color:#ae81ff>0</span>); <span style=color:#75715e>// animate to state over the period of 1 second
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>100</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>strokeWeight</span>(<span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>stroke</span>(<span style=color:#e6db74>&#39;orange&#39;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>grid</span>({<span style=color:#a6e22e>size</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>200</span>});
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>axes</span>();
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>x_rotate</span>.<span style=color:#a6e22e>checked</span>()) <span style=color:#a6e22e>x_e</span> <span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>y_rotate</span>.<span style=color:#a6e22e>checked</span>()) <span style=color:#a6e22e>y_e</span> <span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>z_rotate</span>.<span style=color:#a6e22e>checked</span>()) <span style=color:#a6e22e>z_e</span> <span style=color:#f92672>++</span>;
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>auto_rotate</span>.<span style=color:#a6e22e>checked</span>()) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>x_e</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>y_e</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>z_e</span><span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>; 
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotateX</span>(<span style=color:#a6e22e>x_e</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.01</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotateZ</span>(<span style=color:#a6e22e>z_e</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.01</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotateY</span>(<span style=color:#a6e22e>y_e</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.01</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>axes</span>(<span style=color:#ae81ff>30</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>switch</span> (<span style=color:#a6e22e>mode</span>.<span style=color:#a6e22e>value</span>()) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Fill&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>fill</span>(<span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Wiredframe&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>stroke</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>texture</span>(<span style=color:#a6e22e>img</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>switch</span> (<span style=color:#a6e22e>tipo</span>.<span style=color:#a6e22e>value</span>()) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Esfera&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>sphere</span>(<span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>());
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Cilindro&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>cylinder</span>(<span style=color:#a6e22e>depth1</span>.<span style=color:#a6e22e>value</span>(), <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>()<span style=color:#f92672>*</span><span style=color:#ae81ff>2</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Cono&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>cone</span>(<span style=color:#a6e22e>depth1</span>.<span style=color:#a6e22e>value</span>(), <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>()<span style=color:#f92672>*</span><span style=color:#ae81ff>1.5</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Cubo&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>box</span>(<span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>());
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Cuboide&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>box</span>(<span style=color:#a6e22e>depth1</span>.<span style=color:#a6e22e>value</span>(), <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>());
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#39;Piramide&#39;</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>cone</span>(<span style=color:#a6e22e>depth1</span>.<span style=color:#a6e22e>value</span>(), <span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>(), <span style=color:#ae81ff>5</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>//sphere(depth.value(), 4, 20);
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#75715e>//sphere(depth.value());
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>50</span><span style=color:#f92672>+</span><span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>());
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotateY</span>(<span style=color:#a6e22e>frames</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.01</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sphere1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mMatrix</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>axes</span>(<span style=color:#ae81ff>30</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>color1</span>.<span style=color:#a6e22e>color</span>());
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sphere</span>(<span style=color:#ae81ff>15</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>push</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>translate</span>(<span style=color:#ae81ff>0</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>50</span><span style=color:#f92672>-</span><span style=color:#a6e22e>depth</span>.<span style=color:#a6e22e>value</span>());
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>rotateZ</span>(<span style=color:#a6e22e>frames</span> <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.01</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sphere2</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mMatrix</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>axes</span>(<span style=color:#ae81ff>30</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>noStroke</span>();
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>color2</span>.<span style=color:#a6e22e>color</span>());
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>sphere</span>(<span style=color:#ae81ff>15</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>pop</span>();
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>toggle_3d_gui</span>.<span style=color:#a6e22e>checked</span>()) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sphere1Projection</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>treeLocation</span>([<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>], { <span style=color:#a6e22e>from</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>sphere1</span>, <span style=color:#a6e22e>to</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;SCREEN&#39;</span> });
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginHUD</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>color1</span>.<span style=color:#a6e22e>position</span>(<span style=color:#a6e22e>sphere1Projection</span>.<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>sphere1Projection</span>.<span style=color:#a6e22e>y</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endHUD</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sphere2Projection</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>treeLocation</span>([<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>], { <span style=color:#a6e22e>from</span><span style=color:#f92672>:</span> <span style=color:#a6e22e>sphere2</span>, <span style=color:#a6e22e>to</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;SCREEN&#39;</span> });
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>beginHUD</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>color2</span>.<span style=color:#a6e22e>position</span>(<span style=color:#a6e22e>sphere2Projection</span>.<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>sphere2Projection</span>.<span style=color:#a6e22e>y</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>endHUD</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>keyPressed</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;b&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>circled</span> <span style=color:#f92672>=</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>circled</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>key</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;p&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>foreshortening</span> <span style=color:#f92672>=</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>foreshortening</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>foreshortening</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>perspective</span>() <span style=color:#f92672>:</span> <span style=color:#a6e22e>ortho</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseWheel</span>(<span style=color:#a6e22e>event</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//comment to enable page scrolling
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><iframe id=breath style=width:620px;height:530px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js></script>
+            <script src=https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js></script>
+            <script src=https://github.com/freshfork/p5.EasyCam.git></script>
+            <script src=https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js></script>
+            
+            
+            
+            
+            
+            <script>
+              
+
+// texture
+let img;
+// check boxes
+let toggle_3d_gui;
+let auto_rotate;
+// select
+let mode;
+let tipo;
+// select forma
+let forma;
+// 3d gui
+let color1;
+let color2;
+
+//Ejes x,y,z
+let x_e = 0;
+let y_e = 0;
+let z_e = 0;
+
+let easycam;
+let foreshortening = true;
+
+// bulls shape
+let circled = false;
+
+// resume animation
+let frames = 0;
+
+// spaces
+let sphere1;
+let sphere2;
+
+let depth;
+
+function preload() {
+  img = loadImage('https://upload.wikimedia.org/wikipedia/commons/b/b1/Mapa_mundi_blanco.PNG');
+}
+
+function setup() {
+  createCanvas(600, 480, WEBGL);
+  textureMode(NORMAL);
+  toggle_3d_gui = createCheckbox('toggle 3d gui', false);
+  toggle_3d_gui.style('color', 'white');
+  toggle_3d_gui.position(10, 30);
+  toggle_3d_gui.changed(() => {
+    if (toggle_3d_gui.checked()) {
+      color1.show();
+      color2.show();
+    }
+    else {
+      color1.hide();
+      color2.hide();
+    }
+  });
+  
+  // brush stuff
+  depth = createSlider(10, 130, 50, 0);
+  depth.position(10, 10);
+  depth.style('width', '270px');
+  // select initial brush
+  
+  // brush stuff
+  depth1 = createSlider(10, 130, 50, 0);
+  depth1.position(310, 10);
+  depth1.style('width', '270px');
+  // select initial brush
+  
+  //eje de rotacion x
+  x_rotate = createCheckbox('X', false);
+  x_rotate.style('color', 'white');
+  x_rotate.position(10, 90);
+  
+  //eje de rotacion y
+  y_rotate = createCheckbox('Y', false);
+  y_rotate.style('color', 'white');
+  y_rotate.position(45, 90);
+
+  //eje de rotacion z
+  z_rotate = createCheckbox('Z', false);
+  z_rotate.style('color', 'white');
+  z_rotate.position(80, 90);
+
+  //rotacion
+  auto_rotate = createCheckbox('reinicio rotate', false);
+  auto_rotate.style('color', 'orange');
+  auto_rotate.position(10, 60);
+  
+  mode = createSelect();
+  mode.position(15, 120);
+  mode.option('Fill');
+  mode.option('Wiredframe');
+  mode.option('Texture');
+  mode.value('Texture');
+  
+  tipo = createSelect();
+  tipo.position(15, 150);
+  tipo.option('Esfera');
+  tipo.option('Cilindro');
+  tipo.option('Cono');
+  tipo.option('Cubo');
+  tipo.option('Cuboide');
+  tipo.option('Piramide');
+  tipo.option('Texture');
+  tipo.value('Esfera');
+  
+  color1 = createColorPicker('cyan');
+  color2 = createColorPicker('magenta');
+  easycam = createEasyCam();
+
+  let state = {
+    distance: 300,           // scalar
+    center: [1, 0, 0],       // vector
+    rotation: [0, 0, 1, 0],  // quaternion
+  };
+  
+  easycam.setState(state, 0); // animate to state over the period of 1 second
+}
+
+function draw() {
+  background(100);
+  
+  push();
+  strokeWeight(2);
+  stroke('orange');
+  grid({size: 200});
+  pop();
+  axes();
+ 
+  if (x_rotate.checked()) x_e ++;
+  if (y_rotate.checked()) y_e ++;
+  if (z_rotate.checked()) z_e ++;
+  
+  if (auto_rotate.checked()) {
+    x_e=0;
+    y_e=0;
+    z_e=0; 
+  }
+  rotateX(x_e * 0.01);
+  rotateZ(z_e * 0.01);
+  rotateY(y_e * 0.01);
+  
+  
+  axes(30);
+  push();
+  
+  switch (mode.value()) {
+    case 'Fill':
+      fill(255, 0, 0);
+      break;
+    case 'Wiredframe':
+      noFill();
+      stroke(0, 255, 255);
+      break;
+    default:
+      noStroke();
+      texture(img);
+  }
+  
+  switch (tipo.value()) {
+    case 'Esfera':
+      sphere(depth.value());
+      break;
+    case 'Cilindro':
+      cylinder(depth1.value(), depth.value()*2);
+      break;
+    case 'Cono':
+      cone(depth1.value(), depth.value()*1.5);
+      break;
+    case 'Cubo':
+      box(depth.value());
+      break;
+    case 'Cuboide':
+      box(depth1.value(), depth.value());
+      break;
+    case 'Piramide':
+      cone(depth1.value(), depth.value(), 5);
+      break;
+    default:
+      //sphere(depth.value(), 4, 20);
+      //sphere(depth.value());
+      break;
+  }
+  //
+  
+  pop();
+  push();
+  
+  translate(0, 50+depth.value());
+  rotateY(frames * 0.01);
+  
+  sphere1 = mMatrix();
+  axes(30);
+  noStroke();
+  fill(color1.color());
+  sphere(15);
+  pop();
+  push();
+  
+  translate(0, -50-depth.value());
+  rotateZ(frames * 0.01);
+  
+  sphere2 = mMatrix();
+  axes(30);
+  
+  noStroke();
+  fill(color2.color());
+  sphere(15);
+  pop();
+  
+  if (toggle_3d_gui.checked()) {
+    let sphere1Projection = treeLocation([0, 0, 0], { from: sphere1, to: 'SCREEN' });
+    beginHUD();
+    color1.position(sphere1Projection.x, sphere1Projection.y);
+    endHUD();
+    let sphere2Projection = treeLocation([0, 0, 0], { from: sphere2, to: 'SCREEN' });
+    beginHUD();
+    color2.position(sphere2Projection.x, sphere2Projection.y);
+    endHUD();
+  }
+}
+
+function keyPressed() {
+  if (key === 'b') {
+    circled = !circled;
+  }
+  if (key === 'p') {
+    foreshortening = !foreshortening;
+    foreshortening ? perspective() : ortho();
+  }
+}
+
+function mouseWheel(event) {
+  //comment to enable page scrolling
+  return false;
+}
+
+
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
       "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/xabelian/VisualComputing/commit/2037cd2ed7c7facd55a084583939cf77c679c48e title="Last modified by xabelian | May 23, 2022" target=_blank rel=noopener><img src=/VisualComputing/svg/calendar.svg class=book-icon alt=Calendar>
-<span>May 23, 2022</span></a></div></div><script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#scene-trees>Scene Trees</a><ul><li><a href=#3d-brush>3D Brush</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
+<span>May 23, 2022</span></a></div></div><script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#scene-trees>Scene Trees</a><ul><li><a href=#3d-brush>3D Brush</a></li><li><a href=#3d-gui>3D GUI</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
