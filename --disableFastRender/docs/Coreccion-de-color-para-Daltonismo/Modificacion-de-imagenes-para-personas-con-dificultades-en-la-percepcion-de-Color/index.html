@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/VisualComputing/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=VisualComputing/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Modificacion de imagenes para personas con dificultades en la percepcion de color #  Introduccion #  El daltonismo es la incapacidad para ver algunos colores en la forma normal.
+Este ocurre cuando hay un problema con los pigmentos en ciertas células nerviosas del ojo que perciben el color. Estas células se llaman conos y se encuentran en la capa de tejido sensible a la luz que recubre la parte posterior del ojo, llamada la retina.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Modificacion de imagenes para personas con dificultades en la percepcion de color #  Introduccion #  El daltonismo es la incapacidad para ver algunos colores en la forma normal.
+Este ocurre cuando hay un problema con los pigmentos en ciertas células nerviosas del ojo que perciben el color. Estas células se llaman conos y se encuentran en la capa de tejido sensible a la luz que recubre la parte posterior del ojo, llamada la retina." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/VisualComputing/docs/Coreccion-de-color-para-Daltonismo/Modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-Color/" />
+<meta property="article:modified_time" content="2022-04-06T08:24:12-05:00" />
+<title>Modificacion De Imagenes Para Personas Con Dificultades en La Percepcion De Color | Showcase Template</title>
+<link rel="manifest" href="/VisualComputing/manifest.json">
+<link rel="icon" href="/VisualComputing/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/VisualComputing/book.min.57120c7bbfbfd8e5b5a85a6997460a2de0b895aeba1ad924da702624e8689e24.css" integrity="sha256-VxIMe7&#43;/2OW1qFppl0YKLeC4la66Gtkk2nAmJOhoniQ=" crossorigin="anonymous">
+  <script defer src="/VisualComputing/flexsearch.min.js"></script>
+  <script defer src="/VisualComputing/en.search.min.f99a222887a693a4f83476fedb715fdaeff5cb4ccbb6f54af8f7aacac40ff650.js" integrity="sha256-&#43;ZoiKIemk6T4NHb&#43;23Ff2u/1y0zLtvVK&#43;PeqysQP9lA=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/VisualComputing/"><span>Showcase Template</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/VisualComputing/docs/Coreccion-de-color-para-Daltonismo/Modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-Color/" class=" active">Modificacion De Imagenes Para Personas Con Dificultades en La Percepcion De Color</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/VisualComputing/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Modificacion De Imagenes Para Personas Con Dificultades en La Percepcion De Color</strong>
+
+  <label for="toc-control">
+    
+    <img src="/VisualComputing/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-color">Modificacion de imagenes para personas con dificultades en la percepcion de color</a>
+      <ul>
+        <li><a href="#introduccion">Introduccion</a>
+          <ul>
+            <li><a href="#tipos-de-daltonismo">Tipos de Daltonismo</a></li>
+            <li><a href="#entendiendo-el-problema">Entendiendo el problema</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#deteccion-de-daltonismo">Deteccion de Daltonismo</a>
+      <ul>
+        <li><a href="#tests-de-ishihara">Tests de Ishihara</a></li>
+        <li><a href="#test-con-anomaloscopio">Test con Anomaloscopio</a></li>
+        <li><a href="#test-de-tonos">Test de tonos</a></li>
+        <li><a href="#resultados">Resultados</a>
+          <ul>
+            <li><a href="#simulando-la-vision-de-un-paciente">Simulando la vision de un paciente</a></li>
+          </ul>
+        </li>
+        <li><a href="#original-image-with-red-predominance">Original Image with red predominance</a>
+          <ul>
+            <li><a href="#mejorando-la-visibilidad-por-medio-de-p5">Mejorando la visibilidad por medio de p5</a></li>
+          </ul>
+        </li>
+        <li><a href="#referencias">Referencias</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-color">
+  Modificacion de imagenes para personas con dificultades en la percepcion de color
+  <a class="anchor" href="#modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-color">#</a>
+</h1>
+<h2 id="introduccion">
+  Introduccion
+  <a class="anchor" href="#introduccion">#</a>
+</h2>
+<p>El daltonismo es la incapacidad para ver algunos colores en la forma normal.</p>
+<p>Este ocurre cuando hay un problema con los pigmentos en ciertas células nerviosas del ojo que perciben el color. Estas células se llaman conos y se encuentran en la capa de tejido sensible a la luz que recubre la parte posterior del ojo, llamada la retina.</p>
+<p>Si sólo falta un pigmento, usted puede tener dificultad para diferenciar entre el rojo y el verde, que es el tipo más común de daltonismo. Si falta un pigmento diferente, usted puede tener dificultad para ver los colores azul y amarillo. Las personas con daltonismo para los colores azul y amarillo con frecuencia tienen problemas para identificar también los colores rojos y verdes.</p>
+<p>La forma más grave de daltonismo es la acromatopsia. Se trata de una rara afección en la cual una persona no puede ver ningún color, solamente sombras de gris.</p>
+<p>La mayoría de los casos de daltonismo se deben a un problema genético. Muy pocas mujeres son daltónicas y aproximadamente 1 de cada 10 hombres sufren alguna forma de daltonismo.</p>
+<h3 id="tipos-de-daltonismo">
+  Tipos de Daltonismo
+  <a class="anchor" href="#tipos-de-daltonismo">#</a>
+</h3>
+<ul>
+<li>
+<p>Acromático: no hay percepción de ningún color, la visión es en blanco y negro con matices de gris. Es poco frecuente (1/100.000).</p>
+</li>
+<li>
+<p>Monocromático: solo se ve un color, en distintas tonalidades.</p>
+</li>
+<li>
+<p>Dicromático: existen tres tipos:</p>
+<ul>
+<li>Protanopía, ausencia de fotoreceptores al rojo. La parte del espectro de colores que normalmente se ve rojo-verde, se ve gris.</li>
+<li>Deuteranopía, ausencia de fotoreceptores al verde. La parte del espectro de colores que normalmente se ve verde, se ve gris.</li>
+<li>Tritanopía, ausencia de fotoreceptores al azul, esta es una condición muy rara.</li>
+</ul>
+</li>
+<li>
+<p>Tricromático anómalo: el portador confunde los colores, y es la alteración que se presenta con más frecuencia. En la macula existen los tres tipos de fotoreceptores (para rojo, verde y azul) pero la captación de colores es irregular. Estos pacientes tienen percepción de los colores anormal, semejante a los dicromáticos pero menos acentuadas, dentro de este grupo se incluyen:</p>
+<ul>
+<li>Protanomalía (1% en hombres- 0.01 % en mujeres).</li>
+<li>Deuteranomalía es la más frecuente, (6% en hombres- 0.4% en mujeres).</li>
+<li>Tritanomalía la menos frecuente (0.01 en hombres- 0.01 % en mujeres).</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.qvision.es/blogs/ana-tauste/files/2016/04/daltonismo-1024x1006.jpg" alt="Daltonismo Acromático" /></p>
+<h3 id="entendiendo-el-problema">
+  Entendiendo el problema
+  <a class="anchor" href="#entendiendo-el-problema">#</a>
+</h3>
+<p>Para las personas que no tenemos dificultades para el reconocimiento de colores, entender el daltonismo muchas veces es simplemente creer que se confunde un color por otro y ya, pero esta condición, como pudimos ver anteriormente, tiene distintas variantes y no solo eso, tambien niveles. Una persona con daltonismo tricromático con deutoranopia en grado leve moderado, podria percibir los colores rojos de una forma no tan vívida</p>
+<p><img src="/VisualComputing/sketches/red_crayons.png" alt="Imagen Referencia Rojos" /></p>
+<p>Si mediante al procesamiento de imagenes queremos simular este tipo de daltonismo, lo primero que debemos recordar es que en una imagen el color de cada pixel esta compuesto por niveles de cada uno de los colores RGB.</p>
+<p><img src="/VisualComputing/sketches/paleta.png" alt="Imagen Referencia Rojos" /></p>
+<p>Entonces si dismunuimos el nivel del rojo y aumentamos el nivel del verde podriamos acercarnos a una recreación de este tipo de daltonismo</p>
+<p><img src="/VisualComputing/sketches/crayon_ref2.png" alt="Imagen daltonismo tricromático" /></p>
+<h1 id="deteccion-de-daltonismo">
+  Deteccion de Daltonismo
+  <a class="anchor" href="#deteccion-de-daltonismo">#</a>
+</h1>
+<p>Existen diferentes formas para la detección del Daltonismo.</p>
+<h2 id="tests-de-ishihara">
+  Tests de Ishihara
+  <a class="anchor" href="#tests-de-ishihara">#</a>
+</h2>
+<p><img src="https://www.colorlitelens.com/images/Ishihara/Ishihara_07.jpg" alt="Test de Ishihara" /></p>
+<p>Este es el tipo más común de prueba de daltonismo. Un oftalmólogo (usualmente) le pedirá que mire una imagen formada por puntos de colores con un número o forma de diferente color en el medio. Si la forma se mezcla con el fondo y no puedes verla, es posible que el paciente tenga un tipo de daltonismo.</p>
+<p>Diferentes placas de color pueden verificar diferentes tipos de daltonismo.</p>
+<h2 id="test-con-anomaloscopio">
+  Test con Anomaloscopio
+  <a class="anchor" href="#test-con-anomaloscopio">#</a>
+</h2>
+<p><img src="https://www.researchgate.net/profile/Dimitria-Gatzia/publication/315959577/figure/fig3/AS:494445285961728@1494896350925/An-anomaloscope-is-usually-used-to-test-color-blindness-or-conduct-matching-experiments.png" alt="Test de Anamoloscopio" /></p>
+<p>Esta prueba verifica si el paciente puede igualar el brillo de dos luces. Se mira a través de un ocular a 2 luces que tienen diferentes niveles de brillo. Se usan perillas para ajustar las luces y se trata de hacer que coincidan. Si no puede igualar el brillo de las 2 luces, es posible que el paciente sufra de daltonismo.</p>
+<h2 id="test-de-tonos">
+  Test de tonos
+  <a class="anchor" href="#test-de-tonos">#</a>
+</h2>
+<p><img src="https://mymodernmet.com/wp/wp-content/uploads/2018/10/color-vision-test-pantone-2.jpg" alt="Test de Tonos" /></p>
+<p>En una prueba de tono, Se entregan bloques de diferentes colores. Su oftalmólogo pide al paciente que las coloque en el orden del arcoíris, como de rojo a púrpura. Si tiene problemas para ponerlos en el orden correcto, es posible que tenga un tipo de daltonismo. Los oftalmólogos a menudo usan esta prueba para las personas que necesitan tener una visión del color muy precisa para sus trabajos, como fotógrafos o diseñadores.</p>
+<h2 id="resultados">
+  Resultados
+  <a class="anchor" href="#resultados">#</a>
+</h2>
+<h3 id="simulando-la-vision-de-un-paciente">
+  Simulando la vision de un paciente
+  <a class="anchor" href="#simulando-la-vision-de-un-paciente">#</a>
+</h3>
+<h2 id="original-image-with-red-predominance">
+  Original Image with red predominance
+  <a class="anchor" href="#original-image-with-red-predominance">#</a>
+</h2>
+<details ><summary>Load Image</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">505</span>);
+  <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadImage</span>(<span style="color:#e6db74">&#39;/VisualComputing/sketches/red_crayons.png&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">image</span>(<span style="color:#a6e22e">img</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+}
+</code></pre></div>
+  </div>
+</details>
+
+
+
+
+
+
+
+
+<iframe
+  id="breath"
+  style="width:620px; height:530px"
+  srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script>
+              
+
+let img;
+
+function setup() {
+  createCanvas(600, 505);
+  img = loadImage(&#39;/VisualComputing/sketches/red_crayons.png&#39;);
+}
+
+function draw() {
+  image(img, 0, 0);
+}
+
+
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "
+></iframe>
+
+<details ><summary>Modify Red to Green</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preload</span>() {
+  <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadImage</span>(<span style="color:#e6db74">&#39;/VisualComputing/sketches/red_crayons.png&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">505</span>);
+
+  <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">loadPixels</span>();
+  <span style="color:#75715e">// Se recorre cada pixel de la imagen
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">y</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">height</span>; <span style="color:#a6e22e">y</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">width</span>; <span style="color:#a6e22e">x</span><span style="color:#f92672">++</span>) {
+      <span style="color:#75715e">// Lee el color de cada pixel
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">originalColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
+
+      <span style="color:#75715e">// Modifica los colores rojo y verde. El azul permanece intacto
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">red</span>(<span style="color:#a6e22e">originalColor</span>)<span style="color:#f92672">-</span><span style="color:#ae81ff">50</span>;
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">green</span>(<span style="color:#a6e22e">originalColor</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">50</span>;
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">blue</span>(<span style="color:#a6e22e">originalColor</span>);
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">outputColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>(<span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">g</span>, <span style="color:#a6e22e">b</span>);
+    
+      <span style="color:#75715e">// Coloca el nuevo color a cada pixel
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">outputColor</span>);
+    }
+  }
+  <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">updatePixels</span>();
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">image</span>(<span style="color:#a6e22e">img</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+}
+
+
+</code></pre></div>
+  </div>
+</details>
+
+
+
+
+
+
+
+
+<iframe
+  id="breath"
+  style="width:620px; height:530px"
+  srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script>
+              
+
+let img;
+
+function preload() {
+  img = loadImage(&#39;/VisualComputing/sketches/red_crayons.png&#39;);
+}
+
+function setup() {
+  createCanvas(600, 505);
+
+  img.loadPixels();
+  // Se recorre cada pixel de la imagen
+  for (let y = 0; y &lt; img.height; y&#43;&#43;) {
+    for (let x = 0; x &lt; img.width; x&#43;&#43;) {
+      // Read the pixel&#39;s color
+      let originalColor = img.get(x, y);
+
+      // Inverse the color
+      const r = red(originalColor)-50;
+      const g = green(originalColor)&#43;50;
+      const b = blue(originalColor);
+      let outputColor = color(r, g, b);
+    
+      // Set the pixel&#39;s color
+      img.set(x, y, outputColor);
+    }
+  }
+  img.updatePixels();
+}
+
+function draw() {
+  image(img, 0, 0);
+}
+
+
+            </script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "
+></iframe>
+
+<h3 id="mejorando-la-visibilidad-por-medio-de-p5">
+  Mejorando la visibilidad por medio de p5
+  <a class="anchor" href="#mejorando-la-visibilidad-por-medio-de-p5">#</a>
+</h3>
+<p>Se uso <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis</a> con la siguiente imagen para simular la vision de un paciente con Deuteranopia (ausencia de la percepción del espectro del color verde).</p>
+<p><img src="/VisualComputing/sketches/deuteranopia-simulation.jpg" alt="Deuteranopia-Simulacion" /></p>
+<p>A la izquierda la imagen original, a la derecha la imagen como la veria un paciente con Deuteranopia al ser simulado con Coblis.</p>
+<p>La modificación de los valores de RGB permite aumentar el contraste de la imagen y diferencias las colores.</p>
+<details ><summary>Modifying colors for visibility</summary>
+  <div class="markdown-inner">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">img</span>;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preload</span>() {
+    <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadImage</span>(<span style="color:#e6db74">&#39;https://xabelian.github.io/VisualComputing/sketches/original.jpg&#39;</span>);
+    }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+    <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">404</span>, <span style="color:#ae81ff">402</span>);
+    <span style="color:#a6e22e">image</span>(<span style="color:#a6e22e">img</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pixelDensity</span>();
+    <span style="color:#a6e22e">loadPixels</span>();
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">y</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>; <span style="color:#a6e22e">y</span><span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">width</span>; <span style="color:#a6e22e">x</span><span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">width</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>;
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pixels</span>[<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0</span>];
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">g</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pixels</span>[<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>];
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pixels</span>[<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>];
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pixels</span>[<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">3</span>];     
+                
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">g</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">80</span>){
+                    <span style="color:#a6e22e">pixels</span>[<span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">b</span><span style="color:#f92672">+</span><span style="color:#ae81ff">70</span>
+                    <span style="color:#75715e">//pixels[index+1] = g-40
+</span><span style="color:#75715e"></span>                }
+
+                
+            }
+        }
+    <span style="color:#a6e22e">updatePixels</span>();
+    }
+</code></pre></div>
+  </div>
+</details>
+
+
+
+
+
+
+
+
+
+<iframe
+  id="imageModification"
+  style="width:429px; height:427px"
+  srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/VisualComputing/sketches/imageModification.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "
+></iframe>
+
+<p>Con este resultado, nuevamente simulamos usando Coblis y se obtiene la siguiente imagen.</p>
+<p><img src="/VisualComputing/sketches/edited-simulated.jpg" alt="Daltonismo Acromático" /></p>
+<h2 id="referencias">
+  Referencias
+  <a class="anchor" href="#referencias">#</a>
+</h2>
+<p><a href="https://jfly.uni-koeln.de/color/">How to make figures and presentations that are friendly to Colorblind people</a>
+<a href="https://medium.com/featurepreneur/understanding-the-concept-of-channels-in-an-image-6d59d4dafaa9">Understanding the concept of channels in an image</a></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/xabelian/VisualComputing/commit/4dbdd6ca8f84316fadae5f380b9eaf488dcf3bad" title='Last modified by xabelian | April 6, 2022' target="_blank" rel="noopener">
+      <img src="/VisualComputing/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>April 6, 2022</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#modificacion-de-imagenes-para-personas-con-dificultades-en-la-percepcion-de-color">Modificacion de imagenes para personas con dificultades en la percepcion de color</a>
+      <ul>
+        <li><a href="#introduccion">Introduccion</a>
+          <ul>
+            <li><a href="#tipos-de-daltonismo">Tipos de Daltonismo</a></li>
+            <li><a href="#entendiendo-el-problema">Entendiendo el problema</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#deteccion-de-daltonismo">Deteccion de Daltonismo</a>
+      <ul>
+        <li><a href="#tests-de-ishihara">Tests de Ishihara</a></li>
+        <li><a href="#test-con-anomaloscopio">Test con Anomaloscopio</a></li>
+        <li><a href="#test-de-tonos">Test de tonos</a></li>
+        <li><a href="#resultados">Resultados</a>
+          <ul>
+            <li><a href="#simulando-la-vision-de-un-paciente">Simulando la vision de un paciente</a></li>
+          </ul>
+        </li>
+        <li><a href="#original-image-with-red-predominance">Original Image with red predominance</a>
+          <ul>
+            <li><a href="#mejorando-la-visibilidad-por-medio-de-p5">Mejorando la visibilidad por medio de p5</a></li>
+          </ul>
+        </li>
+        <li><a href="#referencias">Referencias</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

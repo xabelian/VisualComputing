@@ -7,7 +7,19 @@ type: docs
 
 # Camilo García
 
-# Nicolas Contreras
+# Nicolas David Contreras
+
+## Bio
+
+Mi nombre es Nicolas David Contreras Ramirez, estudiante de doceaba matricula de ingenieria de Sistemas y Computacion de la univerdisidad Nacional de Colombia. Inicie mi vida estudiantil hace 7 años y por fin finalizando mis estudios y proyectos, principalmente relacionados al desarrollo de sofware y diseño web. Para el siguiente semestre espero realizar mis practicas en una empresa de sofware.
+
+## Intereses
+
+Desde mi estudio y pincipalmente a un interes autonomo de prueba y error, me gusta el desarrollo de sofware enfocado a la web ya sea al diseño o funcionalidad. Laboralmente no tengo experiencia y es posible que tenga falencias en el sofware, pero me siento listo para realizar mis actividades en conjunto.
+
+## Hobbies 
+
+Me gusta la musica que relacionada a vivencias o que cuente una historia, tambien me gusta el ciclismo como medio de transporte. 
 
 # Sergio Nicolás Rivera
 
