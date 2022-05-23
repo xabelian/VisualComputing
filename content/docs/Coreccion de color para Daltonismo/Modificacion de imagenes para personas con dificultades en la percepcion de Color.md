@@ -1,6 +1,6 @@
-# Analisis y Modificacion de imagenes para personas con dificultades en la percepcion de color
+# Modificación de imagenes para personas con dificultades en la percepcion de color
 
-## Introduccion
+## Introducción
 
 El daltonismo es la incapacidad para ver algunos colores en la forma normal.
 
@@ -192,7 +192,7 @@ Se uso [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator
 
 ![Deuteranopia-Simulacion](/VisualComputing/sketches/deuteranopia-simulation.jpg)
 
-A la izquierda la imagen original, a la derecha la imagen como la veria un paciente con Deuteranopia.
+A la izquierda la imagen original, a la derecha la imagen como la veria un paciente con Deuteranopia al ser simulado con Coblis.
 
 La modificación de los valores de RGB permite aumentar el contraste de la imagen y diferencias las colores.
 
@@ -201,9 +201,9 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
 
 ```js
 
-    let img;
+   let img;
     function preload() {
-    img = loadImage('/VisualComputing/sketches/original.jpg');
+    img = loadImage('https://xabelian.github.io/VisualComputing/sketches/original.jpg');
     }
 
     function setup() {
@@ -220,7 +220,8 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
                 var a = pixels[index+3];     
                 
                 if (g > 80){
-                    pixels[index+0] = r+70
+                    pixels[index+2] = b+70
+                    //pixels[index+1] = g-40
                 }
 
                 
@@ -237,3 +238,8 @@ La modificación de los valores de RGB permite aumentar el contraste de la image
 Con este resultado, nuevamente simulamos usando Coblis y se obtiene la siguiente imagen.
 
 ![Daltonismo Acromático](/VisualComputing/sketches/edited-simulated.jpg)
+
+## Referencias
+
+[How to make figures and presentations that are friendly to Colorblind people](https://jfly.uni-koeln.de/color/)
+[Understanding the concept of channels in an image](https://medium.com/featurepreneur/understanding-the-concept-of-channels-in-an-image-6d59d4dafaa9)
