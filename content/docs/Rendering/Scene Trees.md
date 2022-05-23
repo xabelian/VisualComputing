@@ -231,3 +231,495 @@ function mouseWheel(event) {
 }
 
 {{< /p5-global-iframe >}}
+
+
+### 3D GUI
+
+{{< details title="p5 iFrame ShortCode" open=false >}}
+```js
+< p5-iframe sketch="/sketches/trees/3dbrush.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" lib2="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="625" height="475" >
+```
+{{< /details >}}
+
+{{< details title="3D GUI js" open=false >}}
+```js
+
+// Brush controls
+// texture
+let img;
+// check boxes
+let toggle_3d_gui;
+let auto_rotate;
+// select
+let mode;
+let tipo;
+// select forma
+let forma;
+// 3d gui
+let color1;
+let color2;
+
+//Ejes x,y,z
+let x_e = 0;
+let y_e = 0;
+let z_e = 0;
+
+let easycam;
+let foreshortening = true;
+
+// bulls shape
+let circled = false;
+
+// resume animation
+let frames = 0;
+
+// spaces
+let sphere1;
+let sphere2;
+
+let depth;
+
+function preload() {
+  img = loadImage('https://upload.wikimedia.org/wikipedia/commons/b/b1/Mapa_mundi_blanco.PNG');
+}
+
+function setup() {
+  createCanvas(600, 480, WEBGL);
+  textureMode(NORMAL);
+  toggle_3d_gui = createCheckbox('toggle 3d gui', false);
+  toggle_3d_gui.style('color', 'white');
+  toggle_3d_gui.position(10, 30);
+  toggle_3d_gui.changed(() => {
+    if (toggle_3d_gui.checked()) {
+      color1.show();
+      color2.show();
+    }
+    else {
+      color1.hide();
+      color2.hide();
+    }
+  });
+  
+  // brush stuff
+  depth = createSlider(10, 130, 50, 0);
+  depth.position(10, 10);
+  depth.style('width', '270px');
+  // select initial brush
+  
+  // brush stuff
+  depth1 = createSlider(10, 130, 50, 0);
+  depth1.position(310, 10);
+  depth1.style('width', '270px');
+  // select initial brush
+  
+  //eje de rotacion x
+  x_rotate = createCheckbox('X', false);
+  x_rotate.style('color', 'white');
+  x_rotate.position(10, 90);
+  
+  //eje de rotacion y
+  y_rotate = createCheckbox('Y', false);
+  y_rotate.style('color', 'white');
+  y_rotate.position(45, 90);
+
+  //eje de rotacion z
+  z_rotate = createCheckbox('Z', false);
+  z_rotate.style('color', 'white');
+  z_rotate.position(80, 90);
+
+  //rotacion
+  auto_rotate = createCheckbox('reinicio rotate', false);
+  auto_rotate.style('color', 'orange');
+  auto_rotate.position(10, 60);
+  
+  mode = createSelect();
+  mode.position(15, 120);
+  mode.option('Fill');
+  mode.option('Wiredframe');
+  mode.option('Texture');
+  mode.value('Texture');
+  
+  tipo = createSelect();
+  tipo.position(15, 150);
+  tipo.option('Esfera');
+  tipo.option('Cilindro');
+  tipo.option('Cono');
+  tipo.option('Cubo');
+  tipo.option('Cuboide');
+  tipo.option('Piramide');
+  tipo.option('Texture');
+  tipo.value('Esfera');
+  
+  color1 = createColorPicker('cyan');
+  color2 = createColorPicker('magenta');
+  easycam = createEasyCam();
+
+  let state = {
+    distance: 300,           // scalar
+    center: [1, 0, 0],       // vector
+    rotation: [0, 0, 1, 0],  // quaternion
+  };
+  
+  easycam.setState(state, 0); // animate to state over the period of 1 second
+}
+
+function draw() {
+  background(100);
+  
+  push();
+  strokeWeight(2);
+  stroke('orange');
+  grid({size: 200});
+  pop();
+  axes();
+ 
+  if (x_rotate.checked()) x_e ++;
+  if (y_rotate.checked()) y_e ++;
+  if (z_rotate.checked()) z_e ++;
+  
+  if (auto_rotate.checked()) {
+    x_e=0;
+    y_e=0;
+    z_e=0; 
+  }
+  rotateX(x_e * 0.01);
+  rotateZ(z_e * 0.01);
+  rotateY(y_e * 0.01);
+  
+  
+  axes(30);
+  push();
+  
+  switch (mode.value()) {
+    case 'Fill':
+      fill(255, 0, 0);
+      break;
+    case 'Wiredframe':
+      noFill();
+      stroke(0, 255, 255);
+      break;
+    default:
+      noStroke();
+      texture(img);
+  }
+  
+  switch (tipo.value()) {
+    case 'Esfera':
+      sphere(depth.value());
+      break;
+    case 'Cilindro':
+      cylinder(depth1.value(), depth.value()*2);
+      break;
+    case 'Cono':
+      cone(depth1.value(), depth.value()*1.5);
+      break;
+    case 'Cubo':
+      box(depth.value());
+      break;
+    case 'Cuboide':
+      box(depth1.value(), depth.value());
+      break;
+    case 'Piramide':
+      cone(depth1.value(), depth.value(), 5);
+      break;
+    default:
+      //sphere(depth.value(), 4, 20);
+      //sphere(depth.value());
+      break;
+  }
+  //
+  
+  pop();
+  push();
+  
+  translate(0, 50+depth.value());
+  rotateY(frames * 0.01);
+  
+  sphere1 = mMatrix();
+  axes(30);
+  noStroke();
+  fill(color1.color());
+  sphere(15);
+  pop();
+  push();
+  
+  translate(0, -50-depth.value());
+  rotateZ(frames * 0.01);
+  
+  sphere2 = mMatrix();
+  axes(30);
+  
+  noStroke();
+  fill(color2.color());
+  sphere(15);
+  pop();
+  
+  if (toggle_3d_gui.checked()) {
+    let sphere1Projection = treeLocation([0, 0, 0], { from: sphere1, to: 'SCREEN' });
+    beginHUD();
+    color1.position(sphere1Projection.x, sphere1Projection.y);
+    endHUD();
+    let sphere2Projection = treeLocation([0, 0, 0], { from: sphere2, to: 'SCREEN' });
+    beginHUD();
+    color2.position(sphere2Projection.x, sphere2Projection.y);
+    endHUD();
+  }
+}
+
+function keyPressed() {
+  if (key === 'b') {
+    circled = !circled;
+  }
+  if (key === 'p') {
+    foreshortening = !foreshortening;
+    foreshortening ? perspective() : ortho();
+  }
+}
+
+function mouseWheel(event) {
+  //comment to enable page scrolling
+  return false;
+}
+
+```
+{{< /details >}}
+
+{{< p5-global-iframe id="breath" width="620" height="530" >}}
+
+// texture
+let img;
+// check boxes
+let toggle_3d_gui;
+let auto_rotate;
+// select
+let mode;
+let tipo;
+// select forma
+let forma;
+// 3d gui
+let color1;
+let color2;
+
+//Ejes x,y,z
+let x_e = 0;
+let y_e = 0;
+let z_e = 0;
+
+let easycam;
+let foreshortening = true;
+
+// bulls shape
+let circled = false;
+
+// resume animation
+let frames = 0;
+
+// spaces
+let sphere1;
+let sphere2;
+
+let depth;
+
+function preload() {
+  img = loadImage('https://upload.wikimedia.org/wikipedia/commons/b/b1/Mapa_mundi_blanco.PNG');
+}
+
+function setup() {
+  createCanvas(600, 480, WEBGL);
+  textureMode(NORMAL);
+  toggle_3d_gui = createCheckbox('toggle 3d gui', false);
+  toggle_3d_gui.style('color', 'white');
+  toggle_3d_gui.position(10, 30);
+  toggle_3d_gui.changed(() => {
+    if (toggle_3d_gui.checked()) {
+      color1.show();
+      color2.show();
+    }
+    else {
+      color1.hide();
+      color2.hide();
+    }
+  });
+  
+  // brush stuff
+  depth = createSlider(10, 130, 50, 0);
+  depth.position(10, 10);
+  depth.style('width', '270px');
+  // select initial brush
+  
+  // brush stuff
+  depth1 = createSlider(10, 130, 50, 0);
+  depth1.position(310, 10);
+  depth1.style('width', '270px');
+  // select initial brush
+  
+  //eje de rotacion x
+  x_rotate = createCheckbox('X', false);
+  x_rotate.style('color', 'white');
+  x_rotate.position(10, 90);
+  
+  //eje de rotacion y
+  y_rotate = createCheckbox('Y', false);
+  y_rotate.style('color', 'white');
+  y_rotate.position(45, 90);
+
+  //eje de rotacion z
+  z_rotate = createCheckbox('Z', false);
+  z_rotate.style('color', 'white');
+  z_rotate.position(80, 90);
+
+  //rotacion
+  auto_rotate = createCheckbox('reinicio rotate', false);
+  auto_rotate.style('color', 'orange');
+  auto_rotate.position(10, 60);
+  
+  mode = createSelect();
+  mode.position(15, 120);
+  mode.option('Fill');
+  mode.option('Wiredframe');
+  mode.option('Texture');
+  mode.value('Texture');
+  
+  tipo = createSelect();
+  tipo.position(15, 150);
+  tipo.option('Esfera');
+  tipo.option('Cilindro');
+  tipo.option('Cono');
+  tipo.option('Cubo');
+  tipo.option('Cuboide');
+  tipo.option('Piramide');
+  tipo.option('Texture');
+  tipo.value('Esfera');
+  
+  color1 = createColorPicker('cyan');
+  color2 = createColorPicker('magenta');
+  easycam = createEasyCam();
+
+  let state = {
+    distance: 300,           // scalar
+    center: [1, 0, 0],       // vector
+    rotation: [0, 0, 1, 0],  // quaternion
+  };
+  
+  easycam.setState(state, 0); // animate to state over the period of 1 second
+}
+
+function draw() {
+  background(100);
+  
+  push();
+  strokeWeight(2);
+  stroke('orange');
+  grid({size: 200});
+  pop();
+  axes();
+ 
+  if (x_rotate.checked()) x_e ++;
+  if (y_rotate.checked()) y_e ++;
+  if (z_rotate.checked()) z_e ++;
+  
+  if (auto_rotate.checked()) {
+    x_e=0;
+    y_e=0;
+    z_e=0; 
+  }
+  rotateX(x_e * 0.01);
+  rotateZ(z_e * 0.01);
+  rotateY(y_e * 0.01);
+  
+  
+  axes(30);
+  push();
+  
+  switch (mode.value()) {
+    case 'Fill':
+      fill(255, 0, 0);
+      break;
+    case 'Wiredframe':
+      noFill();
+      stroke(0, 255, 255);
+      break;
+    default:
+      noStroke();
+      texture(img);
+  }
+  
+  switch (tipo.value()) {
+    case 'Esfera':
+      sphere(depth.value());
+      break;
+    case 'Cilindro':
+      cylinder(depth1.value(), depth.value()*2);
+      break;
+    case 'Cono':
+      cone(depth1.value(), depth.value()*1.5);
+      break;
+    case 'Cubo':
+      box(depth.value());
+      break;
+    case 'Cuboide':
+      box(depth1.value(), depth.value());
+      break;
+    case 'Piramide':
+      cone(depth1.value(), depth.value(), 5);
+      break;
+    default:
+      //sphere(depth.value(), 4, 20);
+      //sphere(depth.value());
+      break;
+  }
+  //
+  
+  pop();
+  push();
+  
+  translate(0, 50+depth.value());
+  rotateY(frames * 0.01);
+  
+  sphere1 = mMatrix();
+  axes(30);
+  noStroke();
+  fill(color1.color());
+  sphere(15);
+  pop();
+  push();
+  
+  translate(0, -50-depth.value());
+  rotateZ(frames * 0.01);
+  
+  sphere2 = mMatrix();
+  axes(30);
+  
+  noStroke();
+  fill(color2.color());
+  sphere(15);
+  pop();
+  
+  if (toggle_3d_gui.checked()) {
+    let sphere1Projection = treeLocation([0, 0, 0], { from: sphere1, to: 'SCREEN' });
+    beginHUD();
+    color1.position(sphere1Projection.x, sphere1Projection.y);
+    endHUD();
+    let sphere2Projection = treeLocation([0, 0, 0], { from: sphere2, to: 'SCREEN' });
+    beginHUD();
+    color2.position(sphere2Projection.x, sphere2Projection.y);
+    endHUD();
+  }
+}
+
+function keyPressed() {
+  if (key === 'b') {
+    circled = !circled;
+  }
+  if (key === 'p') {
+    foreshortening = !foreshortening;
+    foreshortening ? perspective() : ortho();
+  }
+}
+
+function mouseWheel(event) {
+  //comment to enable page scrolling
+  return false;
+}
+
+{{< /p5-global-iframe >}}
