@@ -1,7 +1,3 @@
-# Rasterización Y Scene Trees
-
-## Rasterizacion
-
 ## Scene Trees
 ### 3D Brush
 
