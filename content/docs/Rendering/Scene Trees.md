@@ -245,6 +245,14 @@ function mouseWheel(event) {
 
 ### 3D GUI
 
+GUI utiliza mallas para crear una interfaz de usuario interactiva, que está completamente integrada en su escena. Es un programa informático que actúa de interfaz de usuario, utilizando un conjunto de imágenes y objetos gráficos para representar la información y acciones disponibles en la interfaz. Su principal uso consiste en proporcionar un entorno visual sencillo para permitir la comunicación con el sistema operativo de una máquina o computador.
+
+Habitualmente las acciones se realizan mediante manipulación directa, para facilitar la interacción del usuario con la computadora. Surge como evolución de las interfaces de línea de comandos que se usaban para operar los primeros sistemas operativos y es pieza fundamental en un entorno gráfico.
+
+Las GUI 3D aparecieron en la literatura y las películas de ciencia ficción antes de que fueran técnicamente viables o de uso común. En la ficción en prosa, las GUI 3D se han retratado como entornos sumergibles, acuñados como el "ciberespacio" de William Gibson y el "metaverso" y los "avatares" de Neal Stephenson. 
+
+La película estadounidense de 1993 Jurassic Park presenta el administrador de archivos 3D File System Navigator de Silicon Graphics, un administrador de archivos de la vida real para los sistemas operativos Unix. La película Minority Report tiene escenas de agentes de policía que utilizan sistemas de datos 3D especializados.
+
 {{< details title="p5 iFrame ShortCode" open=false >}}
 ```js
 < p5-iframe sketch="/sketches/trees/3dbrush.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" lib2="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.js" width="625" height="475" >
