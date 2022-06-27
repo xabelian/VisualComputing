@@ -2,7 +2,7 @@ let pg;
 let truchetShader;
 
 function preload() {
-  truchetShader = readShader('secondShader.frag', { matrices: Tree.NONE, varyings: Tree.NONE });
+  truchetShader = readShader('/VisualComputing/sketches/shaders/diamondtiles.frag', { matrices: Tree.NONE, varyings: Tree.NONE });
 }
 
 function setup() {
@@ -54,8 +54,8 @@ function changeShader() {
   let item = selShader.value();
   console.log(item);
   let shaders = {
-    'shader1': 'firstShader.frag',
-    'shader2': 'secondShader.frag',
+    'shader1': '/VisualComputing/sketches/shaders/diamondtiles.frag',
+    'shader2': '/VisualComputing/sketches/shaders/truchet.frag',
   }
     truchetShader = readShader(shaders[item], { matrices: Tree.NONE, varyings: Tree.NONE });
   selShader.selected(item);
