@@ -44,6 +44,14 @@ Esta imagen muestra un ejemplo del resultado que se quiere obtener realizando el
 
 {{< p5-iframe sketch="/VisualComputing/sketches/WebCamSketch.js" width="625" height="475">}}
 
+## Conclusiones
+
+La implementación de shaders para manipulación de iamgenes en tiempo real es posible gracias a todo el trabajo existente en OpenGL, ya que esto permite que con recursos de hardware, que incluso se encuentran en la nube de GitHub, se pueda hacer uso de los shaders. Sin embargo, los algoritmos requeridos para obtener el resultado final (mejoras de colores y sombreados) son mas complejos de lo esperado para la implementación en video, razón por la cual solo se logró la implementación de una máscara sobre la imagen obtenida de la cámara web.
+
+## Trabajo futuro
+
+El objetivo, y se continua desarrollando conocimiento e investigación sobre esta área, es seguir implementado shaders y máscaras para mejoramiento de video en tiempo real par ayudar a las personas con discapacidades visuales.
+
 
 ## Referencias
 
