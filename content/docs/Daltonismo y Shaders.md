@@ -6,7 +6,7 @@ Como se trabajó en la primera entrega de este curso, pudimos identificar distin
 
 ![Deuteranopia-Simulacion](/VisualComputing/sketches/deuteranopia-simulation.jpg)
 
-En esa primera entrega se realizó la modificación de los valores RGB de las imágenes por medio de P5. Ahi se identificó que para cada uno de los tipos de daltonismo, era posibel modificar la escada de cada uno de los valores de RGB para el ajuste de las imágenes. Ahora, el objetivo es hacer uso de shaders para evaluar si con este método se pueden obtener mejores resultados.
+En esa primera entrega se realizó la modificación de los valores RGB de las imágenes por medio de P5. Ahi se identificó que para cada uno de los tipos de daltonismo, era posile modificar el nivel de cada uno de los valores de RGB para el ajuste de las imágenes. Ahora, el objetivo es hacer uso de shaders para evaluar si con este método se pueden obtener mejores resultados.
 
 ## ¿Y, que son los Shaders?
 
@@ -42,10 +42,47 @@ Esta imagen muestra un ejemplo del resultado que se quiere obtener realizando el
 
 ### Transformación de imagen usando Shaders: Ejecución y simulación 
 
+{{< details title="Modify RGB values" open=false >}}
+
+```js
+
+let lumaShader;
+let img;
+let grey_scale;
+
+function preload() {
+  lumaShader = readShader('/VisualComputing/sketches/shaders/deuteranopia.frag', { varyings: Tree.texcoords2 });
+  img = loadImage('https://xabelian.github.io/VisualComputing/sketches/bosque.jpg');
+}
+
+function setup() {
+  createCanvas(580, 580, WEBGL);
+  noStroke();
+  textureMode(NORMAL);
+  shader(lumaShader);
+  lumaShader.setUniform('texture', img);
+}
+
+function draw() {
+  background(0);
+  quad(-width / 2, -height / 2, width / 2, -height / 2, width / 2, height / 2, -width / 2, height / 2);
+}
+
+```
+{{< /details >}}
+
+Vamos a repetir el proceso realizado en la primera entrega. Se tiene la imagen original del bosque.
 ![Imagen de bosque antes de ser procesada.](/VisualComputing/sketches/bosque.jpg)
 
-{{< p5-iframe sketch="/VisualComputing/sketches/deuteranopia.js" width="580" height="580">}}
+Luego modificamos los valores RGB de la imagen para hacer un cambio, que al ser simulado por un simulador de deuteranopia, o visto por un paciente con este tipo de "Color blindness" pueda distinguir mejor los colores al ejemplo de arriba.
 
+{{<p5-iframe sketch="/VisualComputing/sketches/deuteranopia.js" width="700" height="700">}}
+
+La imagen es luego pasada por un simulador de deuteranopia de Coblis (Color Blindness Simulator)
+
+![Imagen de bosque tras ser modificada y simulada.](/VisualComputing/sketches/deuteranopia-simulado.jpg)
+
+Como se puede observar, los colores de la imagen son más distinguibles, que al observar la imagen original y en la primera entrega.
 
 ### Imagen desde la cámara web
 
