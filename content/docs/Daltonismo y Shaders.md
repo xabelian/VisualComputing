@@ -40,6 +40,13 @@ Esta imagen muestra un ejemplo del resultado que se quiere obtener realizando el
 
 ![Realce Colores y Contornos](/VisualComputing/sketches/original_shad1.png)
 
+### Transformación de imagen usando Shaders: Ejecución y simulación 
+
+![Imagen de bosque antes de ser procesada.](/VisualComputing/sketches/bosque.jpg)
+
+{{< p5-iframe sketch="/VisualComputing/sketches/deuteranopia.js" width="580" height="580">}}
+
+
 ### Imagen desde la cámara web
 
 {{< p5-iframe sketch="/VisualComputing/sketches/WebCamSketch.js" width="625" height="475">}}
